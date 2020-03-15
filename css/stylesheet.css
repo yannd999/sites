@@ -1,0 +1,297 @@
+
+* {
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+}
+
+article.index {
+    padding: 2rem 60% 2rem 2rem;
+    margin-left: 5rem;
+    font-size: 1.3rem;
+}
+
+h2.bb a {
+    color: #000000;
+    text-decoration: none;
+}
+
+h2.bb {
+    font-size: 2.1rem;
+}
+
+.index ul li {
+    list-style-image: url('../img/Julie/ul.jpg');
+}
+
+html {
+    background-color: #ffffff;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    margin:0;
+    height:100%;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+            "banner"
+            "content"
+            "aside"
+            "footer";
+}
+
+header {
+    grid-area: banner;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1 {
+    position: center;
+    margin: 8rem 0 2rem 0;
+    font-size: 2.2rem;
+}
+
+.verhaal {
+    background-image: url("../img/Julie/prinses.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.verhaalHtml {
+    background-color: #CAF7F4;
+}
+
+nav {
+    width: 100%;
+    padding: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem 0 4rem 0;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-align: center;
+    font-size: 19px;
+    padding: 15px 30px 15px 30px;
+    display: block;
+    flex-wrap: wrap;
+    width: 15rem;
+    position: center;
+}
+
+nav ul li a {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.verhaalnav {
+    background-color: #F881A9;
+    color: #ffffff;
+}
+
+.home {
+    background-color: #8a2be2;
+    color: #ffffff;
+}
+
+.samen, .samen footer {
+    background-color: #f00;
+}
+
+.samen article {
+    border: 1rem solid #000;
+    margin: 16px;
+    padding: 8px;
+    max-width: 40%;
+    border-bottom: #f00;
+    border-top: #f00;
+    margin-left: 6rem;
+}
+
+.samen article img {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+}
+
+.samenFooter {
+    max-width: 100%;
+    border: 1rem solid #000;
+    border-left: #f00;
+    border-right: #f00;
+    background-color: #f00;
+}
+
+.samenFooter article {
+    border: none;
+}
+
+.christmasNav {
+    background-color: #7BBBA9;
+}
+/*
+.christmas {
+    background-image: url("/img/Julie/christmas-background.jpg");
+} */
+
+canvas{
+    position:absolute;
+    max-width: 100%;
+    top:7rem;
+    left:0;
+}
+
+.randomNav {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    height: 3.05rem;
+}
+
+nav ul li a:hover:not(#current) {
+    background-color: transparent;
+    color: #000000;
+}
+
+.v {
+    padding: 1rem;
+    max-width: 70%;
+    margin-left: 15%;
+    font-weight: lighter;
+    line-height: 1.9rem;
+    margin-bottom: 1rem;
+}
+
+.v  a {
+    text-shadow: 0.3px 0.3px red;
+    color: red;
+}
+
+footer p {
+    padding: 1rem;
+}
+
+footer article .voet {
+    width: 100%;
+    grid-area: footer;
+    font-size: 1.2rem;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.samen div .tickcounter a {
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+article {
+    grid-area: content;
+    border: 5px solid #000000;
+    border-radius: 1rem;
+}
+
+.gedichtMain article {
+    line-height: 1.2rem;
+    margin-left: 15%;
+    width: 70%;
+    margin-bottom: 5rem;
+}
+
+.gedichtMain article:first-child {
+    padding: 1rem 1rem 1rem 27% ;
+    background: #000000;
+    color: #ffffff;
+}
+
+.gedichtMain article:nth-child(2) {
+    padding: 1rem 1rem 1rem 10%;
+    background: #800080;
+    color: #ffffff;
+}
+
+.gedichtMain article:nth-child(3) {
+    padding: 1rem 1rem 1rem 45%;
+    background: #0000ff;
+    color: #ffffff;
+}
+
+.gedichtMain article:nth-child(4) {
+    padding: 1rem 1rem 1rem 1rem;
+    background: #000000;
+    color: #ffffff;
+}
+
+.gedichtMain article:nth-child(5) {
+    padding: 1rem 1rem 1rem 22%;
+    background: #8a2be2;
+    color: #ffffff;
+}
+
+.gedichtMain article:nth-child(6) {
+    padding: 1rem 1rem 1rem 7%;
+    background: #00bfff;
+    color: #ffffff;
+}
+
+.gedichtMain article:nth-child(7) {
+    padding: 2rem 1rem 1rem 25%;
+    color: #ffffff;
+    background-image: linear-gradient(#000000, #800080, #0000ff);
+}
+
+.gedichtMain article:nth-child(8) {
+    padding: 1rem 1rem 1rem 17%;
+    background-color: #ffffff;
+}
+
+.gedichtMain article:nth-child(9) {
+    padding: 1rem 1rem 1rem 35%;
+    background: #0CA800;
+}
+
+h2 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+h5 {
+    margin-top: 1rem;
+    font-size: 12px;
+}
+
+.gedichtNav {
+    background-color: blue;
+}
+
+#img {
+    max-height: 30rem;
+}
+
+.img {
+    margin-left: 32%;
+    margin-bottom: 5rem;
+    border: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .v a {
+        color: #000;
+    }
+}

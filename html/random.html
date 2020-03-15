@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+        <meta charset="UTF-8">
+        <title>Random Saying</title>
+        <link rel="stylesheet" media="all" href="../css/reset.css">
+        <link rel="stylesheet" media="all" href="../css/stylesheet.css">
+        <link rel="icon" type="image/png" sizes="16x16" href="../img/Julie/jay.png">
+    </head>
+<body>
+<header>
+        <nav>
+                <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="verhaal.html">Er was eens..</a></li>
+                        <li><a href="gedichten.html">Gedichten en teksten</a></li>
+                        <li><a href="time.html">Samen</a></li>
+                        <li><a href="random.html" class="randomNav" id="current">Random</a></li>
+                    </ul>
+            </nav>
+    </header>
+    <main><!--
+        <canvas id="canvas"></canvas>
+-->
+        <article class="img">
+            <p><img id="img" src=""></p>
+        </article>
+
+        <script type="text/javascript">
+            (function() {
+                var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
+                    function(callback) {
+                        window.setTimeout(callback, 1000 / 60);
+                    };
+                window.requestAnimationFrame = requestAnimationFrame;
+            })();
+
+
+            var flakes = [],
+                canvas = document.getElementById("canvas"),
+                ctx = canvas.getContext("2d"),
+                flakeCount = 400,
+                mX = -100,
+                mY = -100;
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            function snow() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                for (var i = 0; i < flakeCount; i++) {
+                    var flake = flakes[i],
+                        x = mX,
+                        y = mY,
+                        minDist = 100,
+                        x2 = flake.x,
+                        y2 = flake.y;
+
+                    var dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y));
+
+                    if (dist < minDist) {
+                        var force = minDist / (dist * dist),
+                            xcomp = (x - x2) / dist,
+                            ycomp = (y - y2) / dist,
+                            deltaV = force * 20;
+
+                        flake.velX -= deltaV * xcomp;
+                        flake.velY -= deltaV * ycomp;
+
+                    } else {
+                        flake.velX *= .98;
+                        if (flake.velY <= flake.speed) {
+                            flake.velY = flake.speed
+                        }
+                        flake.velX += Math.cos(flake.step += .05) * flake.stepSize;
+                    }
+
+                    ctx.fillStyle = "rgba(255,255,255," + flake.opacity + ")";
+                    flake.y += flake.velY;
+                    flake.x += flake.velX;
+
+                    if (flake.y >= canvas.height || flake.y <= 0) {
+                        reset(flake);
+                    }
+
+
+                    if (flake.x >= canvas.width || flake.x <= 0) {
+                        reset(flake);
+                    }
+
+                    ctx.beginPath();
+                    ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                requestAnimationFrame(snow);
+            }
+
+            function reset(flake) {
+                flake.x = Math.floor(Math.random() * canvas.width);
+                flake.y = 0;
+                flake.size = (Math.random() * 3) + 2;
+                flake.speed = (Math.random()) + 0.5;
+                flake.velY = flake.speed;
+                flake.velX = 0;
+                flake.opacity = (Math.random() * 5) + 0.3;
+            }
+
+            function init() {
+                for (var i = 0; i < flakeCount; i++) {
+                    var x = Math.floor(Math.random() * canvas.width),
+                        y = Math.floor(Math.random() * canvas.height),
+                        size = (Math.random() * 5) + 2, // * 3
+                        speed = (Math.random() * 5) + 0.5,// * 1
+                        opacity = (Math.random() * 0.5) + 0.3;
+
+                    flakes.push({
+                        speed: speed,
+                        velY: speed,
+                        velX: 0,
+                        x: x,
+                        y: y,
+                        size: size,
+                        stepSize: (Math.random()) / 30,
+                        step: 0,
+                        opacity: opacity
+                    });
+                }
+
+                snow();
+            }
+
+            canvas.addEventListener("mousemove", function(e) {
+                mX = e.clientX;
+                mY = e.clientY;
+            });
+
+            window.addEventListener("resize",function(){
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+
+            init();
+        </script>
+    </main>
+<footer>
+        <article class="voet">
+                <p>Foto: <a id="image"></a><a href="source.html">Source</a></p>
+            </article>
+    </footer>
+</body>
+
+</html>
+<script type="text/javascript">
+    var xs = ["3f33af335ff2603d6836b356d3826431.jpg", "4a58573348f3bc6a9fc2595dd836b1cd.jpg", "4e7e73e94bff8e9d552afbceb3a5a33e.jpg", "6e9c158a854681ec73c7f382abc49885.jpg", "7dbab2109a3b460c81c7c3fe90f850d2.jpg", "58b027653495bdf599a76fd970a418c4.jpg", "96fa880887c597a461757fb144c6d642.jpg", "198a479371b965af43262202501eecd6.jpg", "327b25098863a2d82ff6f645902135af.jpg", "499f8b2f314ae021b42796fa74fb6945.jpg", "1834f99862ed32e823c4efc10cb48b61.jpg", "7222ab3a8c73428c1c7ac1ee03953a77.jpg", "448159346f58fa382052a88ceada3944.jpg", "a3f235d5f93869540b851b12efbb615d.jpg", "ae36be7be4c6617949454a23247f4782.jpg", "aee1e4bff3898e6470c888806ee461d8.jpg", "cc3c46314e5de656fb2f9e0a6f2b9440.jpg", "db2fffb16103147cb6ca750530842f7f.jpg", "e6a32e70dd38eb9aef0e1f67707d29bd.jpg", "e20f977326f2e0b705a201a9752d4b62.jpg", "e3491e2aa3cd2a0048fa6b7855b895ff.jpg", "ea32cc66a85ad120e7c4b3300a941ed1.jpg", "ec5b4dfd69f45c3b68aa86ce8ae2c52e.jpg", "f8d3e094f6f8f60a7683316ed6872192.jpg", "fa7f0ec1b5c4503b7102b84f944bf780.jpg"];
+    var i = Math.round(Math.random()*24);
+    var img = xs[i];
+    var el = document.getElementById("img");
+    var path = "../img/Julie/";
+    el.src = path + img;
+    document.getElementById("image").innerText = img + " ";
+
+</script>

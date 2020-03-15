@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Home</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+</head>
+
+<style>
+
+div.container main {
+  background-color: #fff;
+  width: 20%;
+  margin-left: 37%;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 2px solid #f00;
+}
+
+.link {
+  color: #000;
+}
+</style>
+
+<body>
+<header>
+    <h1>
+        BS2
+    </h1>
+
+</header>
+
+<div class="container">
+    <main id="main">
+        <section>
+            <h2><a class="link" href="../files/BS21.zip">Deel 1 files</a></h2>
+            <h2><a class="link" href="../files/BS22.zip">Deel 2 files</a></h2>
+        </section>
+
+	<p><a class="link" href="../files/xtra.zip">eXtra files</a></p>
+
+	<p><a class="link" href="https://www.tutorialspoint.com/powershell/index.htm" target="_blank">Powershell Tutorial</a></p>
+	<p><a class="link" href="https://www.katacoda.com/courses/docker" target="_blank">Katacoda</a></p>
+	<p><a class="link" href="https://www.youtube.com/watch?v=mG3yNCHeQiY" target="_blank">LDAP schema</a></p>
+
+	<p><a style="font-size:10px;" class="link" href="../img/kerstboom.jpg" target="_blank">Een kerstboom voor M. Swennen</a></p>
+    </main>
+</div>
+</body>
+
+<script type="text/javascript">
+  window.addEventListener("load", pageInit, false);
+
+  function pageInit() {
+    var index = Math.round(Math.random()*2);
+    if (index == 0) document.body.style.backgroundImage = "url('../img/meeseeks.jpg')";
+    else if (index == 1) document.body.style.backgroundImage = "url('../img/mr.png')";
+    else document.body.style.backgroundImage = "url('../img/picklerick.jfif')";
+  }
+</script>
+</html>

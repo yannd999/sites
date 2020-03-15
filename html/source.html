@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Source</title>
+    <link rel="stylesheet" media="all" href="../css/reset.css">
+    <link rel="stylesheet" media="all" href="../css/stylesheet.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/Julie/jay.png">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="home.html" id="current" class="home">Home</a></li>
+            <li><a href="christmas.html">NYE</a></li>
+            <li><a href="verhaal.html">Er was eens..</a></li>
+            <li><a href="gedichten.html">Gedichten en teksten</a></li>
+            <li><a href="time.html">Samen</a></li>
+            <li><a href="random.html">Random</a></li>
+        </ul>
+    </nav>
+    <h1>Source</h1>
+</header>
+    <main>
+<!--
+        <canvas id="canvas"></canvas>-->
+        <h2>Links from quotes:</h2>
+        <p>
+            <a href="https://www.pinterest.com/pin/402016704236368287/">https://www.pinterest.com/pin/402016704236368287/</a><br>
+            <a href="https://www.pinterest.com/pin/751397519058287820/">https://www.pinterest.com/pin/751397519058287820/</a><br>
+            <a href="https://www.pinterest.com/pin/722194490225749023/">https://www.pinterest.com/pin/722194490225749023/</a><br>
+            <a href="https://www.pinterest.com/pin/310678074293055663/">https://www.pinterest.com/pin/310678074293055663/</a><br>
+            <a href="https://www.pinterest.com/pin/596375175637419491/">https://www.pinterest.com/pin/596375175637419491/</a><br>
+            <a href="https://www.pinterest.com/pin/230035493453846813/">https://www.pinterest.com/pin/230035493453846813/</a><br>
+            <a href="https://www.pinterest.com/pin/333407178662741931/">https://www.pinterest.com/pin/333407178662741931/</a><br>
+            <a href="https://www.pinterest.com/pin/AdFuukXXRuP0YY2FrFxMDas4gq2OeIsnXdLV6WmWo-KIZaaZccMWxeM/">https://www.pinterest.com/pin/AdFuukXXRuP0YY2FrFxMDas4gq2OeIsnXdLV6WmWo-KIZaaZccMWxeM/</a><br>
+            <a href="https://www.pinterest.com/pin/743516219710706596/">https://www.pinterest.com/pin/743516219710706596/</a><br>
+            <a href="https://www.pinterest.com/pin/385620786841168638/">https://www.pinterest.com/pin/385620786841168638/</a><br>
+            <a href="https://www.pinterest.com/pin/93731235980937672/">https://www.pinterest.com/pin/93731235980937672/</a><br>
+            <a href="https://www.pinterest.com/pin/583779170428483915/">https://www.pinterest.com/pin/583779170428483915/</a><br>
+            <a href="https://www.pinterest.com/pin/150378075045036954/">https://www.pinterest.com/pin/150378075045036954/</a><br>
+            <a href="https://www.pinterest.com/pin/633389135074621672/">https://www.pinterest.com/pin/633389135074621672/</a><br>
+            <a href="https://www.pinterest.com/pin/796996465287034760/">https://www.pinterest.com/pin/796996465287034760/</a><br>
+            <a href="https://www.pinterest.com/pin/681380618601731310/">https://www.pinterest.com/pin/681380618601731310/</a><br>
+            <a href="https://www.pinterest.com/pin/236016836709402865/">https://www.pinterest.com/pin/236016836709402865/</a><br>
+            <a href="https://www.pinterest.com/pin/526358275199256694/">https://www.pinterest.com/pin/526358275199256694/</a><br>
+            <a href="https://www.pinterest.com/pin/339951471870786943/">https://www.pinterest.com/pin/339951471870786943/</a><br>
+            <a href="https://www.pinterest.com/pin/41025046592212461/">https://www.pinterest.com/pin/41025046592212461/</a><br>
+            <a href="https://www.pinterest.com/pin/309622543131312640/">https://www.pinterest.com/pin/309622543131312640/</a><br>
+            <a href="https://www.pinterest.com/pin/526358275199966135/">https://www.pinterest.com/pin/526358275199966135/</a><br>
+            <a href="https://www.pinterest.com/pin/509258670363694684/">https://www.pinterest.com/pin/509258670363694684/</a><br>
+            <a href="https://www.pinterest.com/pin/583779170428346345/">https://www.pinterest.com/pin/583779170428346345/</a><br>
+            <a href="https://www.pinterest.com/pin/394487248604822385/">https://www.pinterest.com/pin/394487248604822385/</a>
+        </p>
+
+        <script type="text/javascript">
+            (function() {
+                var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
+                    function(callback) {
+                        window.setTimeout(callback, 1000 / 60);
+                    };
+                window.requestAnimationFrame = requestAnimationFrame;
+            })();
+
+
+            var flakes = [],
+                canvas = document.getElementById("canvas"),
+                ctx = canvas.getContext("2d"),
+                flakeCount = 400,
+                mX = -100,
+                mY = -100;
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            function snow() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                for (var i = 0; i < flakeCount; i++) {
+                    var flake = flakes[i],
+                        x = mX,
+                        y = mY,
+                        minDist = 100,
+                        x2 = flake.x,
+                        y2 = flake.y;
+
+                    var dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y));
+
+                    if (dist < minDist) {
+                        var force = minDist / (dist * dist),
+                            xcomp = (x - x2) / dist,
+                            ycomp = (y - y2) / dist,
+                            deltaV = force * 20;
+
+                        flake.velX -= deltaV * xcomp;
+                        flake.velY -= deltaV * ycomp;
+
+                    } else {
+                        flake.velX *= .98;
+                        if (flake.velY <= flake.speed) {
+                            flake.velY = flake.speed
+                        }
+                        flake.velX += Math.cos(flake.step += .05) * flake.stepSize;
+                    }
+
+                    ctx.fillStyle = "rgba(255,255,255," + flake.opacity + ")";
+                    flake.y += flake.velY;
+                    flake.x += flake.velX;
+
+                    if (flake.y >= canvas.height || flake.y <= 0) {
+                        reset(flake);
+                    }
+
+
+                    if (flake.x >= canvas.width || flake.x <= 0) {
+                        reset(flake);
+                    }
+
+                    ctx.beginPath();
+                    ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
+                    ctx.fill();
+                }
+                requestAnimationFrame(snow);
+            }
+
+            function reset(flake) {
+                flake.x = Math.floor(Math.random() * canvas.width);
+                flake.y = 0;
+                flake.size = (Math.random() * 3) + 2;
+                flake.speed = (Math.random()) + 0.5;
+                flake.velY = flake.speed;
+                flake.velX = 0;
+                flake.opacity = (Math.random() * 5) + 0.3;
+            }
+
+            function init() {
+                for (var i = 0; i < flakeCount; i++) {
+                    var x = Math.floor(Math.random() * canvas.width),
+                        y = Math.floor(Math.random() * canvas.height),
+                        size = (Math.random() * 5) + 2, // * 3
+                        speed = (Math.random() * 5) + 0.5,// * 1
+                        opacity = (Math.random() * 0.5) + 0.3;
+
+                    flakes.push({
+                        speed: speed,
+                        velY: speed,
+                        velX: 0,
+                        x: x,
+                        y: y,
+                        size: size,
+                        stepSize: (Math.random()) / 30,
+                        step: 0,
+                        opacity: opacity
+                    });
+                }
+
+                snow();
+            }
+
+            canvas.addEventListener("mousemove", function(e) {
+                mX = e.clientX;
+                mY = e.clientY;
+            });
+
+            window.addEventListener("resize",function(){
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+
+            init();</script>
+    </main>
+</body>
+</html>
