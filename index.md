@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="icon" href="img/sitelogo.png" type="image/x-icon">
+
+</head>
+
+<body>
+
+<header>
+    <img class="logo" src="img/cd.jpg" height="216" width="204" alt="Logo Produit-X">
+
+    <h1 class="ot">Sous-verres personnalisées</h1>
+    <h2>Par Sophie</h2>
+
+    <nav>
+        <ul>
+            <li><a class="current" href="">Home</a></li>
+            <li><a href="html/overview.html">Photos</a></li>
+            <li><a href="html/contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+    <article class="art1">
+
+        <h2 class="art">Produit de Sophie</h2>
+
+        <a class="art"><img src="img/cds.png" alt="Logo Trend Friends" height="204" width="159"></a>
+        <p><a>Ces sous-verre crée à partir de CD recyclés, au lieux de les jetter, font une trés utile décoration.
+            Décorés par peinture, paillettes, diamants etc.. Tout est fait manuellement. Personnalisé comme vous
+            le désirez et vous pouvez apporter vos CD dont vous n'avez plus besoin et ça vous reviendra moins cher.</a>
+        </p><a class="a" href="html/contact.html">Contactez moi</a>
+        <p><a class="a" href="html/overview.html">Plus de photos</a></p>
+
+    </article>
+
+</main>
+
+<footer>
+    <ul>
+        <li>E-mail à <a class="a" href="mailto:sousverres@gmail.com">sousverres@gmail.com</a></li>
+        <li>Sophie Maniet</li>
+        <li>Copyright 2019</li>
+        <li><a class="a" href="html/PP.html">Privacy Policy</a></li>
+        <li><a class="a" href="html/TOS.html">Terms of Use</a></li>
+    </ul>
+</footer>
+
+</body>
+
+</html>
