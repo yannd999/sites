@@ -43,11 +43,11 @@
                 mX = -100,
                 mY = -100;
 
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            //canvas.width = window.innerWidth;
+            //canvas.height = window.innerHeight;
 
             function snow() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                //ctx.clearRect(0, 0, canvas.width, canvas.height);
 
                 for (let i = 0; i < flakeCount; i++) {
                     let flake = flakes[i],
@@ -145,7 +145,7 @@
     </main>
 <footer>
         <article class="voet">
-                <p>Foto: <a id="image"></a><a href="source.html">Source</a></p>
+                <p>Foto:&nbsp;<a id="image" href="source.html">Source</a></p>
             </article>
     </footer>
 </body>

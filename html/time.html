@@ -21,7 +21,6 @@
     <h1><3</h1>
 </header>
 <main class="samen">
-    <canvas id="canvas" height="322"></canvas>
 
     <!-- https://www.powr.io/plugins/count-up-timer/standalone?id=22114885&platform=html -->
 
@@ -43,9 +42,7 @@
 
     <p>
 	    <a>03/10/2019&nbsp;&nbsp;&#9841;&nbsp;03/03/2020</a>
-    </p>
-    <p>
-	    <a href="why.html" style="margin-top: 1rem">Why only five months?</a>
+	    <a href="why.html" style="margin: 1rem 0 5rem 0; padding: 5rem 0;">Why only five months?</a>
     </p>
 
     <!-- friends :'( -->
@@ -105,124 +102,6 @@
     <article>
         <img src="../img/Julie/Snapchat-1362193987.jpg" alt="">
     </article>
-
-    <script type="text/javascript">
-        (function() {
-            let requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
-                function(callback) {
-                    window.setTimeout(callback, 1000 / 60);
-                };
-            window.requestAnimationFrame = requestAnimationFrame;
-        })();
-
-
-        let flakes = [],
-            canvas = document.getElementById("canvas"),
-            ctx = canvas.getContext("2d"),
-            flakeCount = 400,
-            mX = -100,
-            mY = -100;
-
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-
-        function snow() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            for (let i = 0; i < flakeCount; i++) {
-                let flake = flakes[i],
-                    x = mX,
-                    y = mY,
-                    minDist = 100,
-                    x2 = flake.x,
-                    y2 = flake.y;
-
-                let dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y));
-                if (dist < minDist) {
-                    let force = minDist / (dist * dist),
-                        xcomp = (x - x2) / dist,
-                        ycomp = (y - y2) / dist,
-                        deltaV = force * 20;
-
-                    flake.velX -= deltaV * xcomp;
-                    flake.velY -= deltaV * ycomp;
-
-                } else {
-                    flake.velX *= .98;
-                    if (flake.velY <= flake.speed) {
-                        flake.velY = flake.speed
-                    }
-                    flake.velX += Math.cos(flake.step += .05) * flake.stepSize;
-                }
-
-                ctx.fillStyle = "rgba(0,0,255," + flake.opacity + ")";
-                flake.y += flake.velY;
-                flake.x += flake.velX;
-
-                if (flake.y >= canvas.height || flake.y <= 0) {
-                    reset(flake);
-                }
-
-
-                if (flake.x >= canvas.width || flake.x <= 0) {
-                    reset(flake);
-                }
-
-                ctx.beginPath();
-                ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
-            requestAnimationFrame(snow);
-        }
-
-        function reset(flake) {
-            flake.x = Math.floor(Math.random() * canvas.width);
-            flake.y = 0;
-            flake.size = (Math.random() * 3) + 2;
-            flake.speed = (Math.random()) + 0.5;
-            flake.velY = flake.speed;
-            flake.velX = 0;
-            flake.opacity = (Math.random() * 5) + 0.3;
-        }
-
-        function init() {
-            for (let i = 0; i < flakeCount; i++) {
-                let x = Math.floor(Math.random() * canvas.width),
-                    y = Math.floor(Math.random() * canvas.height),
-                    size = (Math.random() * 5) + 2, // * 3
-                    speed = (Math.random() * 5) + 0.5,// * 1
-                    opacity = (Math.random() * 0.5) + 0.3;
-
-                flakes.push({
-                    speed: speed,
-                    velY: speed,
-                    velX: 0,
-                    x: x,
-                    y: y,
-                    size: size,
-                    stepSize: (Math.random()) / 30,
-                    step: 0,
-                    opacity: opacity
-                });
-            }
-
-            snow();
-        }
-
-        canvas.addEventListener("mousemove", function(e) {
-            mX = e.clientX;
-            mY = e.clientY;
-        });
-
-        window.addEventListener("resize",function(){
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        });
-
-        init();
-    </script>
-
-
 
 </main>
 <footer class="samenFooter">

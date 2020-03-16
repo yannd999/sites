@@ -159,10 +159,10 @@ nav ul li .homeNav {
 } */
 
 canvas{
-    position:absolute;
+    position: absolute;
     max-width: 100%;
-    top:7rem;
-    left:0;
+    top: 7rem;
+    left: 0;
 }
 
 .v {
@@ -175,7 +175,6 @@ canvas{
 }
 
 .v  a {
-    text-shadow: 0.3px 0.3px red;
     color: red;
 }
 
@@ -301,5 +300,23 @@ h5 {
         display: block;
         text-align: left;
         width: 100%;
+    }
+
+    canvas {
+        top: 18.2rem;
+    }
+
+    .v .verh a {
+        color: #000;
+    }
+
+    #img {
+        max-width: 90%;
+    }
+
+    .img {
+        position: center;
+        margin-left: 20%;
+        margin-bottom: 2rem;
     }
 }
