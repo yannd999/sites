@@ -292,7 +292,11 @@ h5 {
     border: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
+    main {
+        background-color: green;
+    }
+
     .navResponsive {
         position: relative;
     }

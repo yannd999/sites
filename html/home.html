@@ -41,10 +41,10 @@
 
             <script type="text/javascript">
 // count om kleur te veranderen
-		var count = 0;
+                let count = 0;
 //
                 (function() {
-                    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
+                    let requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
                         function(callback) {
                             window.setTimeout(callback, 1000 / 60);
                         };
@@ -52,7 +52,7 @@
                 })();
 
 
-                var flakes = [],
+                let flakes = [],
                     canvas = document.getElementById("canvas"),
                     ctx = canvas.getContext("2d"),
                     flakeCount = 400,
@@ -65,17 +65,17 @@
                 function snow() {
                     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-                    for (var i = 0; i < flakeCount; i++) {
-                        var flake = flakes[i],
+                    for (let i = 0; i < flakeCount; i++) {
+                        let flake = flakes[i],
                             x = mX,
                             y = mY,
                             minDist = 100,
                             x2 = flake.x,
                             y2 = flake.y;
 
-                        var dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y));
+                        let dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y));
                         if (dist < minDist) {
-                            var force = minDist / (dist * dist),
+                            let force = minDist / (dist * dist),
                                 xcomp = (x - x2) / dist,
                                 ycomp = (y - y2) / dist,
                                 deltaV = force * 20;
@@ -92,7 +92,7 @@
                         }
 
 // kleur veranderen van de sneeuw op elke 3de dag van de maand (verjaardag)
-			var date = new Date();  // volgende lijn: if (date.getDate() === 3 ||
+			let date = new Date();  // volgende lijn: if (date.getDate() === 3 ||
 			if (date.getDate() === 14 && date.getMonth() === 1) { //getDay = 0 for sunday, 1 for monday,... // getDate gets day of month
 			    if (count % 2 === 0) ctx.fillStyle = "rgba(255, 0, 0," + flake.opacity + ")";
 			    else ctx.fillStyle = "rgba(0, 0, 0," + flake.opacity + ")";
@@ -130,8 +130,8 @@
                 }
 
                 function init() {
-                    for (var i = 0; i < flakeCount; i++) {
-                        var x = Math.floor(Math.random() * canvas.width),
+                    for (let i = 0; i < flakeCount; i++) {
+                        let x = Math.floor(Math.random() * canvas.width),
                             y = Math.floor(Math.random() * canvas.height),
                             size = (Math.random() * 5) + 2, // * 3
                             speed = (Math.random() * 5) + 0.5,// * 1
@@ -170,7 +170,7 @@
 	<script type="text/javascript">
 	    window.addEventListener("load", pageInit, false);
 	    function pageInit() {
-		if (date.getDate() === 6 && date.getMonth() === 3) {
+		if (new Date().date.getDate() === 6 && new Date().date.getMonth() === 3) {
 		    document.getElementsByTagName("h1")[0].innerHTML.style.display = "";
 		    document.getElementsByTagName("h1")[0].innerHTML = "Gelukkige verjaardag Madeliefje&#10047;&nbsp;&#10031;&#9752;&#9788;";
 		}/*
