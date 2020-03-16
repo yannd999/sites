@@ -9,8 +9,12 @@
     <list default="true" id="e8a0021d-6bdc-457c-890f-38bd619eb662" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/gedichten.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/gedichten.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/random.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/random.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/time.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/time.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/verhaal.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/verhaal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/why.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/why.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +202,7 @@
       <workItem from="1560636162422" duration="19000" />
       <workItem from="1560638291729" duration="1572000" />
       <workItem from="1584313369104" duration="1000" />
-      <workItem from="1584347237492" duration="12037000" />
+      <workItem from="1584347237492" duration="15714000" />
     </task>
     <task id="LOCAL-00001" summary="//canvas get context&#10;let ipv var">
       <created>1584348794125</created>

@@ -6,8 +6,9 @@
 }
 
 article.index {
-    padding: 2rem 60% 2rem 2rem;
-    margin-left: 5rem;
+    padding: 4rem 15rem 4rem 4rem;
+    margin-left: 35%;
+    margin-bottom: 2rem;
     font-size: 1.3rem;
 }
 
@@ -153,12 +154,8 @@ nav ul li .homeNav {
 .samenFooter article {
     border: none;
 }
-/*
-.christmas {
-    background-image: url("/img/Julie/christmas-background.jpg");
-} */
 
-canvas{
+canvas {
     position: absolute;
     max-width: 100%;
     top: 7rem;
@@ -281,12 +278,22 @@ h5 {
     border: none;
 }
 
+#why article {
+    grid-area: content;
+    border: 5px solid #000000;
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    overflow: auto;
+    font-size: 3vw;
+}
+
 /* hide scrollbar */
 ::-webkit-scrollbar {
     display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
     nav {
         position: relative;
     }
@@ -318,5 +325,11 @@ h5 {
         position: center;
         margin-left: 20%;
         margin-bottom: 2rem;
+    }
+
+    article.index {
+        padding: 4rem;
+        margin-left: 15%;
+        font-size: 4.5vw;
     }
 }
