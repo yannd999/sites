@@ -170,8 +170,8 @@
 	<script type="text/javascript">
 	    window.addEventListener("load", pageInit, false);
 	    function pageInit() {
-		if (new Date().date.getDate() === 6 && new Date().date.getMonth() === 3) {
-		    document.getElementsByTagName("h1")[0].innerHTML.style.display = "";
+		if (new Date().getDate() === 6 && new Date().getMonth() === 3) {
+		    document.getElementsByTagName("h1")[0].style.display = "";
 		    document.getElementsByTagName("h1")[0].innerHTML = "Gelukkige verjaardag Madeliefje&#10047;&nbsp;&#10031;&#9752;&#9788;";
 		}/*
 		else if (new Date().getDate() === 3) {
@@ -188,7 +188,7 @@
 		}*/
 		else {
                     //document.getElementsByTagName("h1")[1].innerText = "V MSAQ HTA FDLFF";
-		    document.getElementsByTagName("h1")[0].innerHTML.style.display = "none";
+		        document.getElementsByTagName("h1")[0].style.display = "none";
                 }
                 document.getElementsByTagName("h1")[2].innerText = "Ik mis je schatje";
 	    }

@@ -31,8 +31,8 @@
     </div>
 
     <script>
-        (function(d, s, id) { 
-	    var js, pjs = d.getElementsByTagName(s)[0];
+        (function(d, s, id) {
+            let js, pjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s);
             js.id = id;
@@ -42,10 +42,10 @@
     </script>
 
     <p>
-	<h2>03/10/2019&nbsp;&#9841;&nbsp;03/03/2020</h2>
+	    <a>03/10/2019&nbsp;&nbsp;&#9841;&nbsp;03/03/2020</a>
     </p>
     <p>
-	<a href="why.html">Why only five months?</a>
+	    <a href="why.html">Why only five months?</a>
     </p>
 
     <!-- friends :'( -->
@@ -57,7 +57,7 @@
 
     <script>
 	(function(d, s, id) {
-	    var js, pjs = d.getElementsByTagName(s)[0];
+        let js, pjs = d.getElementsByTagName(s)[0];
 	    if (d.getElementById(id)) return; 
 	    js = d.createElement(s); 
 	    js.id = id; 
@@ -108,7 +108,7 @@
 
     <script type="text/javascript">
         (function() {
-            var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
+            let requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
                 function(callback) {
                     window.setTimeout(callback, 1000 / 60);
                 };
@@ -116,7 +116,7 @@
         })();
 
 
-        var flakes = [],
+        let flakes = [],
             canvas = document.getElementById("canvas"),
             ctx = canvas.getContext("2d"),
             flakeCount = 400,
@@ -129,17 +129,17 @@
         function snow() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            for (var i = 0; i < flakeCount; i++) {
-                var flake = flakes[i],
+            for (let i = 0; i < flakeCount; i++) {
+                let flake = flakes[i],
                     x = mX,
                     y = mY,
                     minDist = 100,
                     x2 = flake.x,
                     y2 = flake.y;
 
-                var dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y));
+                let dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y));
                 if (dist < minDist) {
-                    var force = minDist / (dist * dist),
+                    let force = minDist / (dist * dist),
                         xcomp = (x - x2) / dist,
                         ycomp = (y - y2) / dist,
                         deltaV = force * 20;
@@ -186,8 +186,8 @@
         }
 
         function init() {
-            for (var i = 0; i < flakeCount; i++) {
-                var x = Math.floor(Math.random() * canvas.width),
+            for (let i = 0; i < flakeCount; i++) {
+                let x = Math.floor(Math.random() * canvas.width),
                     y = Math.floor(Math.random() * canvas.height),
                     size = (Math.random() * 5) + 2, // * 3
                     speed = (Math.random() * 5) + 0.5,// * 1
