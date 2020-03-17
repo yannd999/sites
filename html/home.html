@@ -20,13 +20,13 @@
                 </ul>
             </nav>
 	    <h1 style="font-size:2.5em"></h1>
-            <h1>V MSAQ HTA FDLFF</h1>
+            <!--<h1>V MSAQ HTA FDLFF</h1>-->
 	    <h1></h1>
         </header>
         <main>
             <canvas id="canvas"></canvas>
 
-	    <article class="index">
+	    <article class="index" style="margin:auto 5% auto 15%;">
 		<h2 style="font-size:1.2em;">Sorry</h2>
 		<p style="margin-bottom:2rem;">
 		    Ik heb je pijn gedaan. Het doet me pijn eraan te denken. Hoe kan het zelfs? Ik ben slecht en reageer heel verkeerd en ik doe
@@ -91,17 +91,17 @@ Doe waar je zin in hebt. Doe waar je goed in bent. Verzorg je goed en blijf de s
 
 
                 let flakes = [],
-                    canvas = document.getElementById("canvas"),
-                    ctx = canvas.getContext("2d"),
+                    //canvas = document.getElementById("canvas"),
+                    //ctx = canvas.getContext("2d"),
                     flakeCount = 400,
                     mX = -100,
                     mY = -100;
 
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
+                //canvas.width = window.innerWidth;
+                //canvas.height = window.innerHeight;
 
                 function snow() {
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    //ctx.clearRect(0, 0, canvas.width, canvas.height);
 
                     for (let i = 0; i < flakeCount; i++) {
                         let flake = flakes[i],
@@ -191,14 +191,14 @@ Doe waar je zin in hebt. Doe waar je goed in bent. Verzorg je goed en blijf de s
                     snow();
                 }
 
-                canvas.addEventListener("mousemove", function(e) {
+                /*canvas.addEventListener("mousemove", function(e) {
                     mX = e.clientX;
                     mY = e.clientY;
-                });
+                });*/
 
                 window.addEventListener("resize",function(){
-                    canvas.width = window.innerWidth;
-                    canvas.height = window.innerHeight;
+                    //canvas.width = window.innerWidth;
+                    //canvas.height = window.innerHeight;
                 });
 
                 init();</script>
@@ -228,13 +228,7 @@ Doe waar je zin in hebt. Doe waar je goed in bent. Verzorg je goed en blijf de s
                     //document.getElementsByTagName("h1")[1].innerText = "V MSAQ HTA FDLFF";
 		        document.getElementsByTagName("h1")[0].style.display = "none";
                 }
-                document.getElementsByTagName("h1")[2].innerText = "Ik mis je schatje";
+                //document.getElementsByTagName("h1")[2].innerText = "Ik mis je schatje";
 	    }
 	</script>
-
-    <footer>
-        <article class="voet">
-            <p></p>
-        </article>
-    </footer>
 </html>
