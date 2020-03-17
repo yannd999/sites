@@ -6,9 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8a0021d-6bdc-457c-890f-38bd619eb662" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e8a0021d-6bdc-457c-890f-38bd619eb662" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,6 +194,7 @@
       <workItem from="1560638291729" duration="1572000" />
       <workItem from="1584313369104" duration="1000" />
       <workItem from="1584347237492" duration="18390000" />
+      <workItem from="1584460041710" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="//canvas get context&#10;let ipv var">
       <created>1584348794125</created>
@@ -222,7 +221,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
