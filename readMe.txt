@@ -88,6 +88,8 @@ Julietje: julie.ml
 		ec5b4dfd69f45c3b68aa86ce8ae2c52e.jpg
 		f8d3e094f6f8f60a7683316ed6872192.jpg
 		fa7f0ec1b5c4503b7102b84f944bf780.jpg
+		photo-1534515729281-5ddf2c470538.jfif
+		inspirational-love-quotes-sayings-12 (1).jpg
 		jay.png
 		prinses.jpg
 		ul.jpg
