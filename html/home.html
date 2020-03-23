@@ -233,11 +233,19 @@ Ik snap je point of view maar probeer ook de mijne te begrijpen.
 
                 init();</script>
         </main>
+	<footer>
+	    <article class="voet">
+		<p>Last update: <a id="update"></a></p>
+	    </article>
+	<footer>
     </body>
 
 	<script type="text/javascript">
 	    window.addEventListener("load", pageInit, false);
 	    function pageInit() {
+		// last update
+		document.getElementById("update").innerText = document.lastModified;
+
 		if (new Date().getDate() === 6 && new Date().getMonth() === 3) {
 		    document.getElementsByTagName("h1")[0].style.display = "";
 		    document.getElementsByTagName("h1")[0].innerHTML = "Gelukkige verjaardag Madeliefje&#10047;&nbsp;&#10031;&#9752;&#9788;";
