@@ -105,7 +105,6 @@ Julietje: julie.ml
 		Snapchat-1555708161.jpg
 		Snapchat-1759605753.jpg
 		Snapchat-2130092990.jpg
-
 		Snapchat-153215576.jpg
 		Snapchat-177417403.jpg
 		Snapchat-221104342.jpg
@@ -124,6 +123,24 @@ Julietje: julie.ml
 		Snapchat-1597621100.jpg
 		Snapchat-1931197733.jpg
 		Snapchat-2000713028.jpg
+		(annif:)
+		Screenshot_20190530-214839.png
+		Screenshot_20190620-193053.png
+		Screenshot_20190701-220730.png
+		Screenshot_20190701-220736.png
+		Screenshot_20190701-220745.png
+		Screenshot_20190701-220750.png
+		Screenshot_20190728-011846.png
+		Screenshot_20190728-011953.png
+		Screenshot_20190801-223618.png
+		Screenshot_20190804-230253.png
+		Screenshot_20190814-005022.png
+		Screenshot_20191010-211442.png
+		Screenshot_20191015-204844.png
+		Screenshot_20191026-112154.png
+		Screenshot_20191026-112200.png
+		Screenshot_20191026-112221.png
+		
 
 	css:
 		stylesheet.css

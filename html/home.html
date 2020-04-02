@@ -36,8 +36,26 @@
         <main>
             <canvas id="canvas"></canvas>
 
+            <article class="index">
+                <h2 class="bb">Hi&nbsp;<a href="https://www.youtube.com/watch?v=ZyhrYis509A" target="_blank">babygirl</a></h2>
+
+                <ul>
+                    <li>You are so cute</li>
+                    <li>Likeable</li>
+                    <li>Lovely</li>
+                    <li>Helpful</li>
+                    <li>Friendly</li>
+		    <li>Strong</li>
+                    <li>Caring</li>
+                    <li>Sweet</li>
+                    <li>Beautiful</li>
+                    <li>Nice</li>
+                </ul>
+            </article>
+
 	    <article class="index" style="margin:auto 5% auto 15%;">
 		<p>Corona is saaii. Ik mis mijn beste vriendin :(</p>
+		<h1 class="birthday" style="display:none;">Hier wat prachtige foto's, omdat het moest ;) xx</h1>
 <!--		<h2 style="font-size:1.2em;">Sorry</h2>
 
 <!--
@@ -74,6 +92,70 @@ Doe waar je zin in hebt. Doe waar je goed in bent. Verzorg je goed en blijf de s
 		</p>-->
 	    </article>
 
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20190530-214839.png" alt="H">
+  	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20190620-193053.png" alt="A">
+  	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20190701-220730.png" alt="P">
+  	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20190728-011846.png" alt="B">
+ 	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20190701-220736.png" alt="P">
+   	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20190701-220745.png" alt="Y">
+    	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20190701-220750.png" alt="_">
+   	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20190728-011953.png" alt="I">
+ 	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20190801-223618.png" alt="R">
+ 	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20190804-230253.png" alt="T">
+ 	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20191010-211442.png" alt="D">
+ 	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20191026-112154.png" alt="Y">
+ 	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20191026-112200.png" alt="_">
+ 	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20191015-204844.png" alt="A">
+ 	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20191026-112221.png" alt="&hearts;">
+ 	    </article>
+
+	    <article class="birthday" style="display:none;">
+        	<img src="../img/Julie/Screenshot_20190814-005022.png" alt="H">
+ 	    </article>
+
 <!--
 	    <article class="index" style="margin:auto 5% auto 15%;">
 		<p style="margin-bottom:2rem;">
@@ -94,22 +176,6 @@ Ik snap je point of view maar probeer ook de mijne te begrijpen.
 		</p>
 	    </article>
 -->
-            <article class="index">
-                <h2 class="bb">Hi&nbsp;<a href="https://www.youtube.com/watch?v=ZyhrYis509A" target="_blank">babygirl</a></h2>
-
-                <ul>
-                    <li>You are so cute</li>
-                    <li>Likeable</li>
-                    <li>Lovely</li>
-                    <li>Helpful</li>
-                    <li>Friendly</li>
-		    <li>Strong</li>
-                    <li>Caring</li>
-                    <li>Sweet</li>
-                    <li>Beautiful</li>
-                    <li>Nice</li>
-                </ul>
-            </article>
 
             <script type="text/javascript">
 // count om kleur te veranderen
@@ -171,7 +237,7 @@ Ik snap je point of view maar probeer ook de mijne te begrijpen.
 			    count++; // count up
 			}
 //
-			else ctx.fillStyle = "rgba(0,255,255," + flake.opacity + ")";
+			//else ctx.fillStyle = "rgba(0,255,255," + flake.opacity + ")";
                         flake.y += flake.velY;
                         flake.x += flake.velX;
 
@@ -184,9 +250,9 @@ Ik snap je point of view maar probeer ook de mijne te begrijpen.
                             reset(flake);
                         }
 
-                        ctx.beginPath();
-                        ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
-                        ctx.fill();
+                        //ctx.beginPath();
+                        //ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
+                        //ctx.fill();
                     }
                     requestAnimationFrame(snow);
                 }
@@ -253,12 +319,14 @@ Ik snap je point of view maar probeer ook de mijne te begrijpen.
 		if (new Date().getDate() === 6 && new Date().getMonth() === 3) {
 		    document.getElementsByTagName("h1")[0].style.display = "";
 		    document.getElementsByTagName("h1")[0].innerHTML = "Gelukkige verjaardag Madeliefje&#10047;&nbsp;&#10031;&#9752;&#9788;";
+	            for (var i = 0; i < 17; i++) {
+          	        document.getElementsByClassName("birthday")[i].style.display = "";
+        	    }
 		}/*
 		else if (new Date().getDate() === 3) {
 		    //var naam = ["Schat", "Schatje", "Babygirl", "Peperkoekje", "Madeliefje", "Mevrouw Delandmeter", "Vriendinnetje", "Snoesje", "Mevrouw Van Bever"];
 		    var naam = ["Madeliefje", "Beste Vriendinnetje", "Snoesje", "Mevrouw Van Bever"];
-		    //var luv = ["Te amo", "Ti Amo", "I Love You", "Je T'aime", "Ich Liebe Dich", "Ik Hou Van Jou", "Я тебя люблю"];
-		    var luv = ["Yo Te Amaba", "Ti Ho Amato", "I Loved You", "Je T'aimais", "Ich Habe Dich Geliebt", "Ik Hield Van Jou", "я любил тебя"];
+		    var luv = ["Te amo", "Ti Amo", "I Love You", "Je T'aime", "Ich Liebe Dich", "Ik Hou Van Jou", "Я тебя люблю"];
 		    var randomIntNaam = Math.round(Math.random()*3);
 		    var randomIntLuv = Math.round(Math.random()*6);
 		    var gekozenNaam = naam[randomIntNaam];
@@ -268,7 +336,7 @@ Ik snap je point of view maar probeer ook de mijne te begrijpen.
 		}*/
 		else {
                     //document.getElementsByTagName("h1")[1].innerText = "V MSAQ HTA FDLFF";
-		        document.getElementsByTagName("h1")[0].style.display = "none";
+		    document.getElementsByTagName("h1")[0].style.display = "none";
                 }
                 //document.getElementsByTagName("h1")[2].innerText = "Ik mis je schatje";
 	    }

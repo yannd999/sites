@@ -288,6 +288,18 @@ h5 {
     font-size: 3vw;
 }
 
+article.birthday {
+    margin: 2rem;
+    max-width: 25%;
+   padding: 0;
+}
+
+article.birthday img {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+
 /* hide scrollbar */
 ::-webkit-scrollbar {
     display: none;
@@ -331,5 +343,9 @@ h5 {
         padding: 4rem;
         margin-left: 15%;
         font-size: 4.5vw;
+    }
+
+    h.birthday {
+	position: center;
     }
 }
