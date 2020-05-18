@@ -128,19 +128,47 @@ nav ul li .homeNav {
     background-color: #f00;
 }
 
-.samen article {
-    border: 1rem solid #000;
+.samen div:not(.tickcounter, .row) {
+/*
     margin: 16px 16px 16px 6%;
-    padding: 8px;
-    max-width: 40%;
+    padding: 8px;*/
+    width:10%;
     border-bottom: #f00;
     border-top: #f00;
 }
 
-.samen article img {
+div:not(.row, .modal-content), article {
+    grid-area: content;
+    border: 5px solid #000000;
+    border-radius: 1rem;
+    width: fit-content;
+}
+
+div.column {
+    width: 47%;
+}
+/* 2 columns */
+div.column:nth-child(2n+1) {
+    float: left;
+    margin-bottom: 1rem;
+}
+div.column:nth-child(2n) {
+     float: right;
+    margin-bottom: 1rem;
+ }
+
+.imgB {
+    max-height: 100%;
+    max-width: 100%;
+    padding: 0;
+    border-radius: 1rem;
+}
+
+.imgV {
     max-width: 100%;
     max-height: 100%;
     padding: 0;
+    border-radius: 5px;
 }
 
 .samenFooter {
@@ -191,12 +219,6 @@ footer article .voet {
 .samen div .tickcounter a {
     cursor: not-allowed;
     pointer-events: none;
-}
-
-article {
-    grid-area: content;
-    border: 5px solid #000000;
-    border-radius: 1rem;
 }
 
 .gedichtMain article {
@@ -291,7 +313,7 @@ h5 {
 article.birthday {
     margin: 2rem;
     max-width: 25%;
-   padding: 0;
+    padding: 0;
 }
 
 article.birthday img {
@@ -305,75 +327,98 @@ article.birthday img {
     display: none;
 }
 
-// fotos vergroten bij samen
-// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img
+/* fotos vergroten bij samen
+// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img*/
 
-.imgV {
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.imgV:hover {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
 .modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
 }
 
 /* Add Animation */
-.modal-content {  
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
+.modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
 }
 
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
 }
 
 @keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+    from {transform:scale(0)}
+    to {transform:scale(1)}
 }
 
 /* The Close Button */
 .close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 .close:hover, .close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -50px;
+    width: auto;
+    height:4rem;
+    padding: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next {
+    left: 70%;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.imgB:hover {
+    cursor: pointer;
+}
 
 @media (max-width: 600px) {
     nav {
@@ -416,10 +461,10 @@ article.birthday img {
     }
 
     h.birthday {
-	position: center;
+        position: center;
     }
 
     .modal-content {
-      width: 100%;
+        width: 100%;
     }
 }
