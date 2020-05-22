@@ -302,15 +302,19 @@ hr {
 --- Intro
 ============================ */
 
-.intro {
+#index .intro {
 	width:100%;
 	position:relative;	
 	background: url(../img/background.jpg) no-repeat top center;
 	background-size: cover;
 }
 
-#intro.intro {
+#index #intro.intro {
 	padding:200px 0 150px 0;
+}
+
+#comp #intro.intro {
+    padding:15px;
 }
 
 .intro .slogan {
@@ -648,6 +652,20 @@ a.btn:hover {
     margin-top: 0;
 }
 
+/* comptentie */
+#analyseren tr td, #oplossingen tr td, #beheren tr td, #projectmatig tr td, #comm tr td, #initiatief tr td, #handelen tr td {
+    margin-top: 2rem;
+}
+
+#analyseren tr td:nth-child(2n+1), #oplossingen tr td:nth-child(2n+1), #beheren tr td:nth-child(2n+1), #projectmatig tr td:nth-child(2n+1), #comm tr td:nth-child(2n+1), #initiatief tr td:nth-child(2n+1), #handelen tr td:nth-child(2n+1) {
+    color: black;
+    width: 45%;
+    padding: 1rem 2rem 2rem 1rem;
+}
+
+#comp #container {
+    width: 100%;
+}
 
 /* Media queries */
 
