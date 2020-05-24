@@ -7,9 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8a0021d-6bdc-457c-890f-38bd619eb662" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/bootstrap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/html/bootstrap/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/bootstrap/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/bootstrap/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/bootstrap/swot.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/bootstrap/swot.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/time.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/time.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -203,6 +203,8 @@
       <workItem from="1586693135225" duration="762000" />
       <workItem from="1589755076387" duration="5189000" />
       <workItem from="1590141151045" duration="52000" />
+      <workItem from="1590356898291" duration="119000" />
+      <workItem from="1590357392712" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="//canvas get context&#10;let ipv var">
       <created>1584348794125</created>
