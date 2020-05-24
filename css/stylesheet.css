@@ -226,6 +226,7 @@ footer article .voet {
     margin-left: 15%;
     width: 70%;
     margin-bottom: 5rem;
+    border-radius: 1rem;
 }
 
 .gedichtMain article:first-child {
@@ -278,6 +279,11 @@ footer article .voet {
 .gedichtMain article:nth-child(9) {
     padding: 1rem 1rem 1rem 35%;
     background: #0CA800;
+    color: #fff;
+}
+
+.gedichtMain article:nth-child(11) {
+    padding: 1rem 1rem 1rem 15%;
 }
 
 h2 {
