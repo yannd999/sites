@@ -15,7 +15,7 @@ Sophie: sous-verrerecycle.cf
 		PP.hmlt
 		TOS.html
 
-Soirée: soireefantomedelopera.tk
+Soirée: ssoireefantome.tkt
 	Photos:
 		PHOTOBOOTH
 		SALLE
@@ -29,7 +29,7 @@ Soirée: soireefantomedelopera.tk
 		soiree.html
 		style.html
 		
-MangerHtml: quoimanger.cf		C:\Users\yannd\Desktop\Bureau\MangerHtml
+MangerHtml: quoimangerr.cft		C:\Users\yannd\Desktop\Bureau\MangerHtml
 	Photos:
 		carbonadesFlamandesImage.jpg
 		crepesImage.jpg
@@ -61,7 +61,7 @@ MangerHtml: quoimanger.cf		C:\Users\yannd\Desktop\Bureau\MangerHtml
 		detail7.html
 		detail8.html
 
-Julietje: julie.ml
+Julietje: juliete.ml
 	Photos:
 		3f33af335ff2603d6836b356d3826431.jpg
 		4a58573348f3bc6a9fc2595dd836b1cd.jpg
